@@ -29,14 +29,6 @@
 	font-weight: 400;
 	color: rgba(255, 255, 255, 0.842);
 }
-.bg-color {
-	background-color: black;
-	background-image: radial-gradient(
-		50% at 50%,
-		rgb(17, 17, 17),
-		rgba(119, 119, 119, 0.1) 100%
-	);
-}
 
 * {
 	box-sizing: border-box;
@@ -51,6 +43,14 @@ body {
 /* header part design */
 header {
 	min-height: 100vh;
+
+	background: rgb(0, 0, 0);
+	background: radial-gradient(
+		circle,
+		rgb(0, 0, 0) 0%,
+		rgba(68, 67, 67, 0.363) 70%
+	);
+	width: 100%;
 }
 
 /* nav part design */
@@ -245,6 +245,11 @@ nav {
 }
 
 /* bmi section design */
+.bmi {
+	width: 100%;
+	height: auto;
+	margin: 0 aut0;
+}
 
 .bmi-container {
 	width: 50%;
@@ -260,6 +265,7 @@ nav {
 
 	display: flex;
 	justify-content: space-around;
+	justify-items: center;
 }
 .calculator-chart-title,
 .calculator-title {
@@ -286,9 +292,11 @@ th {
 	color: #ffff;
 	text-align: left;
 }
-.calculator-chart,
+.calculator-chart {
+	width: 100%;
+	padding: 20px 50px;
+}
 .calculator {
-	width: 70%;
 	padding: 20px 50px;
 }
 .calculator-chart-title {
@@ -301,6 +309,9 @@ th {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 10px;
+	width: 50%;
+	margin-top: 40px;
+	margin-bottom: 20px;
 	width: 50%;
 }
 .box1 {
@@ -315,10 +326,7 @@ th {
 	border: 0;
 	color: rgba(255, 255, 255, 0.626);
 }
-.calculator-table {
-	margin-top: 40px;
-	margin-bottom: 20px;
-}
+
 #box5 {
 	width: 205%;
 }
@@ -416,11 +424,14 @@ hr {
 	border: 1px solid rgba(255, 255, 255, 0.126);
 }
 @media screen and (max-width: 576px) {
+	header {
+		margin: 0 auto;
+	}
 	nav {
 		flex-direction: column;
 		width: 70%;
 		align-items: flex-start;
-		margin-left: 60px;
+		margin-left: 0;
 		margin-right: 0;
 	}
 
@@ -429,7 +440,9 @@ hr {
 	}
 	.nav-title {
 		display: flex;
-		gap: 100%;
+		justify-content: space-between;
+		width: 100%;
+		gap: 60%;
 	}
 	.menu-icon {
 		display: inline;
@@ -440,7 +453,7 @@ hr {
 		flex-direction: column;
 	}
 	.banner-container {
-		margin-left: -70px;
+		width: 100%;
 	}
 	.banner-btn {
 		display: flex;
@@ -455,7 +468,7 @@ hr {
 	}
 	.habit-container {
 		flex-direction: column;
-		width: 30%;
+		width: 50%;
 	}
 
 	.habit-cart1,
@@ -467,7 +480,6 @@ hr {
 	}
 	.run {
 		flex-direction: column;
-		margin: 10px 90px;
 	}
 
 	.run-container {
@@ -481,6 +493,7 @@ hr {
 	.run-btn {
 		width: 100%;
 	}
+
 	.bmi-calculator-container {
 		flex-direction: column;
 		width: 100%;
@@ -497,14 +510,29 @@ hr {
 	.calculator {
 		width: 100%;
 	}
+	.calculator-table {
+		width: 100%;
+	}
+	.box1 {
+		width: 100%;
+	}
+
 	.team-container {
 		grid-template-columns: repeat(1, 1fr);
 	}
 	.team-img {
 		height: 100%;
 	}
+	.foot {
+		height: 100%;
+		width: 100%;
+	}
 	.foot-container {
 		flex-direction: column;
 		gap: 20px;
+	}
+	hr {
+		width: 100%;
+		margin: 0;
 	}
 }
