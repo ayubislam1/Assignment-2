@@ -427,7 +427,7 @@ th {
 	background-color: transparent;
 	backdrop-filter: blur(4px);
 	margin-top: -50px;
-	left: -700px;
+	left: -600px;
 	transition: 2s;
 }
 .new-img-title {
@@ -437,6 +437,7 @@ th {
 	padding: 10px;
 	text-align: center;
 	font-weight: bold;
+	position: relative;
 }
 .new-img-description {
 	position: relative;
@@ -444,6 +445,8 @@ th {
 	text-align: center;
 	font-size: 1em;
 	font-weight: 400;
+	position: relative;
+	padding: 10px;
 }
 .new-img > img {
 	height: 250px;
@@ -616,6 +619,10 @@ hr {
 		gap: 15px;
 	}
 	.new-img {
+		overflow: hidden;
+		height: 100%;
+	}
+	.img-body {
 		width: 100%;
 	}
 }
